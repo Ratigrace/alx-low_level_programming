@@ -1,6 +1,3 @@
-11-print_to_98.c CODE
-
-
 #include <stdio.h>
 	#include "main.h"
 
