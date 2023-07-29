@@ -10,13 +10,23 @@
 
 void print_binary(unsigned long int n)
 {
-	int i;
+	int flag = 0;
+	unsigned long int move = 1;
 
-	for (i = 31; i >= 0; i--)
+	move <<= 63;
+	if (n == 0)
+		_putchar('0');
+
+	while (move > 0)
 	{
-		if (n >> i & 1)
-			_putchar('1');
-		else
+		if ((n & move) == 0 && flag == 1)
 			_putchar('0');
+		if ((n & move) != 0)
+		{
+			_putchar('1');
+			flag = 1;
+		}
+
+		move = move >> 1;
 	}
 }
