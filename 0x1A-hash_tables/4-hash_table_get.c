@@ -5,7 +5,7 @@
  * @ht: pointer to the hash table.
  * @key: key to retrieve value
  *
- * Return: Success - value associated with key 
+ * Return: Success - value associated with key
  *         Failure - NULL
  */
 char *hash_table_get(const hash_table_t *ht, const char *key)
